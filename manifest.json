@@ -1,6 +1,6 @@
 {
   "name": "twtGit",
-  "version": "0.0.2",
+  "version": "0.0.3",
 
   "description": "Tweet repositories, issues, pull requests and releases. Supports GitHub, Bitbucket and Gitlab",
   "permissions": [
