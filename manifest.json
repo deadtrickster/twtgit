@@ -1,0 +1,54 @@
+{
+  "name": "twtGit",
+  "version": "0.0.1",
+
+  "description": "Tweet repositories, issues, pull requests and releases. Supports GitHub, Bitbucket and Gitlab",
+  "permissions": [
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": [
+        "/js/shared/defaults.js",
+        "/js/shared/twt_window.js",
+        "/js/github_content_script.js",
+        "/js/lib/handlebars.min-768ddbd.js"
+      ],
+      "css": ["/css/twt_github.css"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["https://bitbucket.org/*"],
+      "js": [
+        "/js/shared/defaults.js",
+        "/js/shared/twt_window.js",
+        "/js/bitbucket_content_script.js",
+        "/js/lib/handlebars.min-768ddbd.js"
+      ],
+      "css": ["/css/twt_bitbucket.css"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["https://gitlab.com/*"],
+      "js": [
+        "/js/shared/defaults.js",
+        "/js/shared/twt_window.js",
+        "/js/gitlab_content_script.js",
+        "/js/lib/handlebars.min-768ddbd.js"
+      ],
+      "css": ["/css/twt_gitlab.css"],
+      "run_at": "document_start"
+    }
+  ],
+  "options_page": "/options/options.html",
+  "permissions": [
+    "storage"
+  ],
+  "icons": {
+    "16":"images/icon16.png",
+    "48":"images/icon48.png",
+    "128":"images/icon128.png"
+  },
+  "manifest_version": 2
+}
